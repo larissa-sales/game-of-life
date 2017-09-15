@@ -8,13 +8,10 @@ using namespace std;
 
 #define LINE 30
 #define COL 70
-
 typedef Cell(&MatrixCell)[LINE][COL];
-
 class Board{
 private:
 	Cell field[LINE][COL];	
-
 public:
 	Board();
 	~Board();
