@@ -6,7 +6,6 @@
 using namespace std;
 
 class Glider:public Board{
-
 public:
 	MatrixCell setGlider(MatrixCell field, int x, int y);
 };

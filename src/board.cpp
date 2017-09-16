@@ -28,10 +28,10 @@ void Board::printBoard(){
 	for (l=0; l<LINE; l++){
 		for (c=0; c<COL; c++){
 			if(field[l][c].getAlive()){
-				cout << "o";
+				cout << "o ";
 			} 
 			else{
-				cout << ".";
+				cout << "  ";
 			}
 		}
 		cout << endl;

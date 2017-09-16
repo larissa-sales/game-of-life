@@ -6,7 +6,6 @@
 using namespace std;
 
 class Blinker:public Board{
-
 public:
 	MatrixCell setBlinker(MatrixCell field, int x, int y);
 };

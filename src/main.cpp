@@ -2,21 +2,23 @@
 #include "block.hpp"
 #include "blinker.hpp"
 #include "glider.hpp"
+#include "gosper.hpp"
 
 int main(){
 	Board game;
 	Block generator1;
 	Blinker generator2;
 	Glider generator3;
+	Gosper generator4;
 	int x, y, option;
 
 	do{
-		cout << endl <<	 "Choose one option to continue:" << endl << endl;
-		cout << endl <<	 "1. Insert a Block" << endl;
-		cout << endl <<	 "2. Insert a Blinker" << endl;
-		cout << endl <<	 "3. Insert a Glider" << endl;
-		cout << endl <<	 "4. Insert a Gosper Glider Gun" << endl;
-		cout << endl <<	 "5. Begin the game" << endl;
+		cout << endl <<	 "Choose one option to continue:" << endl;
+		cout << endl <<	 "\t1. Insert a Block" << endl;
+		cout << endl <<	 "\t2. Insert a Blinker" << endl;
+		cout << endl <<	 "\t3. Insert a Glider" << endl;
+		cout << endl <<	 "\t4. Insert a Gosper Glider Gun" << endl;
+		cout << endl <<	 "\t5. Begin the game" << endl;
 
 		cin >> option;
 
@@ -44,6 +46,9 @@ int main(){
 				game.setField(generator3.setGlider(game.getField(), x, y));
 
 				break;
+
+			case 4:
+				game.setField(generator4.setGosper(game.getField(), x, y));
 
 			case 5:		
 				game.printBoard();
