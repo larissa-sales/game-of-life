@@ -4,13 +4,20 @@
 #include "glider.hpp"
 #include "gosper.hpp"
 
+void sleep(int ms){
+	int limit = ms+clock();
+	while(clock() < limit);
+}
+
 int main(){
 	Board game;
 	Block generator1;
 	Blinker generator2;
 	Glider generator3;
 	Gosper generator4;
-	int x, y, option;
+	int x, y, option, generations, aux;
+	cout << endl;
+	game.printBoard();
 
 	do{
 		cout << endl <<	 "Choose one option to continue:" << endl;
@@ -29,6 +36,8 @@ int main(){
 
 				game.setField(generator1.setBlock(game.getField(), x, y));
 
+				game.printBoard();
+
 				break;
 
 			case 2:
@@ -36,6 +45,8 @@ int main(){
 				cin >> x >> y;
 
 				game.setField(generator2.setBlinker(game.getField(), x, y));
+
+				game.printBoard();
 
 				break;
 
@@ -45,15 +56,26 @@ int main(){
 
 				game.setField(generator3.setGlider(game.getField(), x, y));
 
+				game.printBoard();
+
 				break;
 
 			case 4:
 				game.setField(generator4.setGosper(game.getField(), x, y));
 
-			case 5:		
 				game.printBoard();
 
 				break;
 		}
 	} while(option != 5);
+
+	cout << "Generations: ";
+	cin >> generations;
+
+	for(aux=0; aux<generations; aux++){
+		game.checkRules();
+		game.printBoard();
+		sleep(125000);
+	}
+	
 }
