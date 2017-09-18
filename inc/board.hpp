@@ -7,7 +7,7 @@
 using namespace std;
 
 #define LINE 20
-#define COL 38
+#define COL 40
 
 typedef Cell(&MatrixCell)[LINE][COL];
 
