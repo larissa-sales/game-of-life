@@ -4,8 +4,6 @@
 #include "glider.hpp"
 #include "gosper.hpp"
 
-
-
 void sleep(int ms){
 	int limit = ms+clock();
 	while(clock() < limit);
@@ -28,7 +26,7 @@ int main(){
 		cout << endl << "\t2. Insert a Blinker" << endl;
 		cout << endl << "\t3. Insert a Glider" << endl;
 		cout << endl << "\t4. Insert a Gosper Glider Gun" << endl;
-		cout << endl << "\t5. Begin the game" << endl;
+		cout << endl << "\t5. Start the game" << endl;
 		cout << endl << "\t=> ";
 
 		cin >> option;
