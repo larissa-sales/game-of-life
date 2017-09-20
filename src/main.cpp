@@ -84,6 +84,5 @@ int main(){
 		game.checkRules();
 		game.printBoard();
 		sleep(125000);
-	}
-	
+	}	
 }
