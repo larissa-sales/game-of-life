@@ -20,7 +20,7 @@ For further informations, go to:
 
 In the terminal, run the command:
 
-`git clone https://gitlab.com/lariss-sales/ep1`
+`git clone https://gitlab.com/larissa-sales/ep1-oo`
 
 #### Running the software
 
